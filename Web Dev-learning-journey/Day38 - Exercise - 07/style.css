@@ -1,0 +1,168 @@
+/* Logo Styling */
+.logo img {
+    width: 164px; /* Set the width of the logo */
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Center items vertically */
+    font-family: "Segoe UI"; /* Set the font */
+    padding: 10px 5%; /* Add padding for spacing */
+}
+
+/* Navigation Menu (Right Side) */
+.right ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Add space between menu items */
+}
+
+.right ul li {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.right ul li span {
+    padding: 0 5px; /* Add horizontal padding */
+}
+
+/* Hero Section Styling */
+.first {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 20px; /* Space between elements */
+    margin: 50px; /* Add outer margin */
+    font-family: sans-serif; /* Set font */
+    text-align: center; /* Center align text */
+}
+
+.first span {
+    font-size: 40px; /* Increase text size */
+}
+
+/* Hero Section Image */
+.first span img {
+    width: 82px; /* Set width of image */
+    margin-left: 10px; /* Add left margin for spacing */
+}
+
+/* Paragraph Styling */
+.first p {
+    font-size: 20px; /* Set font size */
+    width: 60%; /* Limit width to 60% of the screen */
+}
+
+/* Button Styling */
+.btn {
+    background: #00b6d1; /* Set button color */
+    padding: 14px 20px; /* Add padding */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 6px; /* Make corners rounded */
+    font-weight: 700; /* Make text bold */
+    margin: 12px 0; /* Add vertical margin */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: #0093a6; /* Darker shade on hover */
+}
+
+/* Button Link Styling */
+.btn a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color */
+}
+
+/* Green Button Variation */
+.green {
+    background-color: #5cb85c; /* Green background */
+}
+
+.green:hover {
+    background-color: #4a9e4a; /* Darker green on hover */
+}
+
+/* Flexbox Utility Class */
+.flex {
+    display: flex; /* Use flexbox */
+}
+
+/* Small Text Utility Class */
+.small {
+    font-size: 12px; /* Reduce text size */
+}
+
+/* Section Styling */
+.second {
+    max-width: 50vw; /* Set maximum width to 50% of the screen */
+    margin: auto; /* Center horizontally */
+}
+
+/* Item Box Styling */
+.item {
+    padding: 20px; /* Add padding */
+    background: #f9f9f9; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 18px; /* Set font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set font */
+    text-align: center; /* Center align text */
+}
+
+/* Item Title */
+.item-lang {
+    font-weight: 700; /* Make text bold */
+    padding-bottom: 20px; /* Add space below text */
+}
+
+/* Grid Layout */
+.grid {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts based on screen size */
+    gap: 12px; /* Add spacing between items */
+}
+
+/* Download Section Styling */
+.download img {
+    padding: 0px 12px; /* Add padding to images */
+}
+
+.download {
+    display: flex; /* Use flexbox */
+    font-family: sans-serif; /* Set font */
+    gap: 10px; /* Space between elements */
+    align-items: center; /* Align items vertically */
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Display items in a single column */
+    }
+
+    .first span {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .first p {
+        width: 80%; /* Increase text width */
+        font-size: 18px; /* Reduce font size */
+    }
+
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .right ul {
+        flex-direction: column; /* Display menu items in a column */
+        gap: 10px; /* Add space between items */
+    }
+}
