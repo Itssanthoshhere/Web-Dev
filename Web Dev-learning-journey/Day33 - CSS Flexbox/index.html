@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    
+    <style>
+        /* Container with Flexbox */
+        .container {
+            border: 2px solid red; /* Adds a red border around the container */
+            display: flex; /* Enables flexbox */
+            height: 80vh; /* Sets the height to 80% of the viewport */
+            /* justify-content: center; */
+
+            /* Main flex properties */
+            align-items: center; /* Centers items vertically */
+            /* flex-direction: column; */
+
+            /* align-content: flex-start; */
+            /* Note: there is no justify-items  in flexbox; */
+            flex-wrap: wrap; /* Allows items to wrap onto the next row if needed */
+            flex-flow: row wrap; /* Equivalent to setting both flex-direction and flex-wrap */
+            
+            /* Spacing between items */
+            /* gap: 30px; 
+            row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px; /* Sets row-gap of 40px and column-gap of 10px */
+        }
+
+        /* Styling for all flex items */
+        .items {
+            /* flex-grow: 1; */
+            height: 50px; /* Increased height for better visibility */
+            width: 50px; /* Increased width for better visibility */
+            border: 2px solid black; /* Adds a black border to each item */
+            background-color: blueviolet; /* Sets background color */
+            /* margin: 4px; */
+            color: white; /* White text for better contrast */
+            display: flex; /* Enables flex inside each item */
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers text vertically */
+            font-size: 20px; /* Increases text size */
+            font-weight: bold; /* Makes text bold */
+        }
+
+        /* Custom order for specific items */
+        .order-1 {
+            order: 1; /* Moves this item to the end */
+        }
+
+        .order-2 {
+            order: 2; /* Moves this item after order-1 */
+        }
+
+        .order-3 {
+            order: 3; /* Moves this item after order-2 */
+        }
+
+        /* Individual alignment */
+        .item1 {
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            align-self: flex-end; /* Aligns only this item to the bottom */
+        }
+
+        .item2 {
+            align-self: flex-start; /* Aligns only this item to the top */
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Flexbox container -->
+        <div class="container">
+            <div class="items item1">1</div> <!-- Moves to bottom -->
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items order-1">4</div> <!-- Moves later due to order -->
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items item2">7</div> <!-- Moves to top -->
+            <div class="items">8</div>
+            <div class="items">9</div>
+            <div class="items">10</div>
+        </div>
+    </main>
+
+</body>
+
+</html>

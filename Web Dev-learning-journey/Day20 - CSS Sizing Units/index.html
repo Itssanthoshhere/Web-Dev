@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set base font size for the HTML element */
+        html {
+            font-size: 12px;
+        }
+
+        /* Styling for the box element */
+        .box {
+            box-sizing: border-box; /* Ensures padding and border are included in width/height calculations */
+            border: 2px solid black; /* Black border */
+            width: 80vw; /* 80% of the viewport width */
+            height: 10vh; /* 10% of the viewport height */
+            margin: auto; /* Centering the element horizontally */
+            background-color: aquamarine; /* Light blue-green background */
+        }
+
+        /* Styling for the container element */
+        .container {
+            box-sizing: border-box; /* Ensures padding and border are included in width/height calculations */
+            border: 2px solid black; /* Black border */
+            width: 80vw; /* 80% of the viewport width */
+            min-height: 80vh; /* At least 80% of the viewport height */
+            margin: 23px auto; /* Centered with 23px margin on top and bottom */
+            font-size: 18px; /* Base font size for this container */
+            background-color: aquamarine; /* Light blue-green background */
+        }
+
+        /* Styling for direct child div inside container */
+        .container > div {
+            font-size: 2em; /* 2 times the font size of the container (36px) */
+            border: 2px solid red; /* Red border */
+            width: 50%; /* 50% of the container width */
+        }
+
+        /* Styling for nested div inside container's direct child */
+        .container > div > div {
+            border: 2px solid blue; /* Blue border */
+            width: 50%; /* 50% of its parent div's width */
+        }
+
+        /* Styling for another container (mycont) */
+        .mycont {
+            border: 2px solid black; /* Black border */
+            box-sizing: border-box; /* Ensures padding and border are included in width/height calculations */
+            margin: 23px auto; /* Centering the element with 23px margin on top and bottom */
+            color: rgb(0, 0, 0); /* Black text color */
+            font-size: 22px; /* Font size set to 22px */
+            width: 80vw; /* 80% of the viewport width */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box element with a specific width and height -->
+    <div class="box">
+        This is a box
+    </div>
+
+    <!-- Main container that expands dynamically based on content -->
+    <div class="container">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus quia quod iste dolorem voluptatem fuga quidem aspernatur.
+            <!-- Nested div inside the first child div -->
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis voluptas est aliquam, dolores rem.
+            </div>
+        </div>
+    </div>
+
+    <!-- Another container for additional content -->
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>

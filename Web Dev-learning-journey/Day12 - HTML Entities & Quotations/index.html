@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - HTML Entities & Quotations</title>
+    <style>
+        /* Modern alternatives for obsolete tags */
+        .modern-text {
+            color: red;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .underline-text {
+            text-decoration: underline;
+        }
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Entities Example -->
+    <h2>HTML Entities Example</h2>
+    <p>The price is 10 &lt; 20.</p>
+    <p>Copyright &copy; 2025.</p>
+    <p>This is an example&nbsp;text with extra spacing.</p>
+
+    <!-- HTML Quotation Tags -->
+    <h2>HTML Quotation Tags</h2>
+    <blockquote cite="https://example.com">
+        This is a long quote from an external source.  
+        It provides valuable information and is styled for better readability.
+    </blockquote>
+
+    <p>The philosopher said, <q cite="https://example.com">The unexamined life is not worth living.</q></p>
+
+    <!-- Obsolete Tags vs Modern Alternatives -->
+    <h2>Obsolete Tags vs Modern Alternatives</h2>
+
+    <!-- ❌ Obsolete Tag Example -->
+    <font color="red" size="3" face="verdana">This text is styled using the obsolete font tag.</font>
+
+    <center>This text is centered using the obsolete center tag.</center>
+
+    <u>This text is underlined using the obsolete u tag.</u>
+
+    <!-- ✅ Modern CSS Alternative -->
+    <p class="modern-text">This text is styled using modern CSS.</p>
+    <p class="center-text">This text is centered using modern CSS.</p>
+    <p class="underline-text">This text is underlined using modern CSS.</p>
+
+</body>
+</html>

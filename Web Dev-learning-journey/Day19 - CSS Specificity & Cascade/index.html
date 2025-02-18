@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+    <style>
+        /* The specificity of this selector is (0,0,1) because it is an element selector */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selector is (0,1,0) because it is a class selector */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is (0,1,1) because it combines an element and a class selector */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this selector is (0,1,0) because it is an attribute selector */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is (0,1,0) because it is a class selector */
+        .cred {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- This h1 has multiple classes and an attribute applied to it -->
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>

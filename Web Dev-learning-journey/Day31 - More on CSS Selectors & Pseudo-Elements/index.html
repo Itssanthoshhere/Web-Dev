@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors and Pseudo-Elements</title>
+    <style>
+        /* Basic styling for each box */
+        .box {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Selects the first child of .boxes and sets its background color to red */
+        /* .box:first-child {  
+            background-color: red;
+        } */
+
+        /* Changes the first line of the text inside .box elements to orange */
+        /* .box::first-line {
+            color: orange;
+        } */
+
+        /* Applies blue text color and a black border to the .boxes container */
+        /* .boxes {
+            color: blue;
+            border: 2px solid black;
+        } */
+
+        /* Adds 45px padding to <p>, <a>, elements with class .box, 
+           and elements with data-color="primary" attribute */
+        /* p, a, .box, [data-color="primary"] {
+            padding-top: 45px;
+        } */
+
+        /* Selects every odd-numbered .box inside .boxes and changes background color */
+        /* .box:nth-child(odd) {
+            background-color: rgb(145, 145, 247);
+        } */
+
+        /* Selects the second-last .box inside .boxes and sets its background to red */
+        /* .box:nth-last-child(2) {
+            background-color: red;
+        } */
+
+        /* Selects every odd-numbered .box inside .boxes and changes background color to light blue */
+        .box:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        /* Selects every even-numbered .box inside .boxes and changes background color to light green */
+        .box:nth-child(even) {
+            background-color: lightgreen;
+        }
+
+        /* Adds text "Hello Sandy" before the .boxes container */
+        .boxes::before {
+            content: "Hello Sandy"; /* Adds text before .boxes */
+            color: rgb(0, 26, 255); /* Blue text */
+            font-weight: bold;
+            display: block; /* Ensures it appears on a new line */
+            margin-bottom: 5px;
+        }
+        
+        /* Adds text "Web Dev is so good!" after the .boxes container */
+        .boxes::after {
+            content: "Web Dev is so good!"; /* Adds text after .boxes */
+            color: red; /* Red text */
+            font-weight: bold;
+            display: block; /* Ensures it appears on a new line */
+            margin-top: 5px;
+        }
+
+        /* Changes the background color of selected text to black and text color to aqua */
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        /* Styles the first letter of each .box element */
+        .box::first-letter {
+            color: peru; /* First letter in Peru color */
+            font-size: 35px; /* Increases the size of the first letter */
+        }
+
+        /* Styles the placeholder text of input fields */
+        input::placeholder {
+            color: rgb(84, 84, 84); /* Fixing the incomplete RGB value */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <!-- This div has a data attribute and the .box class -->
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+
+        <!-- Input field with a placeholder -->
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>

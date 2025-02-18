@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+    <!-- 'svg': Defines an SVG container.
+         - 'xmlns': Specifies the XML namespace for SVG (necessary for proper rendering).
+         - 'height' and 'width': Set the dimensions of the SVG canvas (100x100). -->
+
+    <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
+    <!-- 'circle': Draws a circle.
+         - 'cx' and 'cy': Set the coordinates for the center of the circle (50, 50).
+         - 'r': Sets the radius of the circle (20 units).
+         - 'stroke': Sets the color of the circle's outline (black).
+         - 'stroke-width': Sets the thickness of the outline (3 units).
+         - 'fill': Sets the fill color of the circle (red). -->
+</svg>

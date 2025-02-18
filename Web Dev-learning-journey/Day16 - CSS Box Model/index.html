@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        /* 
+           🌟 CSS Box Model Example 🌟
+           -----------------------------
+           The Box Model consists of:
+           - Content
+           - Padding
+           - Border
+           - Margin
+        */
+
+        /* Universal Selector: Resets margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Base class for boxes */
+        .box {
+            background-color: aqua; /* Sets background color for all boxes */
+        }
+
+        /* 🌟 Box 1 - Yellow text with blue border */
+        .box1 {
+            color: yellow; /* Text color */
+            padding: 10px; /* Space inside the border */
+            margin: 10px; /* Space outside the border */
+            border: 2px solid blue; /* Blue border with 2px thickness */
+            height: 200px; /* Fixed height */
+            box-sizing: border-box; /* Ensures padding & border are included in height */
+        }
+
+        /* 🌟 Box 2 - Red text with black border */
+        .box2 {
+            color: red; /* Text color */
+            padding: 10px; /* Space inside the border */
+            margin: 25px; /* Space outside the border */
+            border: 2px solid black; /* Black border with 2px thickness */
+            height: 200px; /* Fixed height */
+            box-sizing: border-box; /* Ensures padding & border are included in height */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- First Box -->
+    <div class="box box1">I am a box</div>
+
+    <!-- Second Box -->
+    <div class="box box2">I am another box</div>
+
+</body>
+</html>

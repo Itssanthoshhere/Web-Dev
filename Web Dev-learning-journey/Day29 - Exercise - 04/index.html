@@ -1,0 +1,81 @@
+<!-- Exercise - 04 | Multi Color Website
+     Create a multicolor website that can change color using CSS Variables -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MultiColor Website</title>
+
+    <!-- Importing the Poppins font from Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+
+    <style>
+        /* CSS Variables for defining color themes */
+        /* Alternative color scheme (commented out for now) */
+        /* :root {
+            --primary-color: #ad5afacc;
+            --text-color: white;
+            --secondary-color: #e3cff5cc;
+        } */
+
+        /* Active color scheme */
+        :root {
+            --primary-color: #061872cc;  /* Dark blue */
+            --text-color: white;         /* White text */
+            --secondary-color: #6ea5fccc; /* Light blue background */
+        }
+
+        /* Applying background color using CSS variables */
+        body {
+            background-color: var(--secondary-color);
+        }
+
+        /* Resetting default margin and padding, setting font family */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Styling for the navigation bar */
+        nav {
+            background-color: var(--primary-color); /* Using primary color */
+            padding: 12px 0;
+        }
+
+        /* Styling for navigation menu items */
+        ul li {
+            list-style: none; /* Removing default bullet points */
+            display: inline;  /* Displaying menu items in a row */
+            padding: 23px;
+            font-weight: bolder;
+        }
+
+        /* Styling for navigation links */
+        ul li a {
+            color: var(--text-color); /* White text */
+            text-decoration: none;    /* Removing underline */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section containing the navigation bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

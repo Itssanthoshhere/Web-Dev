@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw; /* The container takes 80% of the viewport width */
+            height: 100vh; /* The container takes the full height of the viewport */
+            border: 2px solid black; /* Adds a black border around the container */
+            display: grid; /* Enables CSS Grid */
+
+            /* Different ways to define grid columns */
+            /* grid-template-columns: [first] 120px [second] 100px [third]; */
+            /* Defines three columns with named grid lines: 
+               - first column = 120px 
+               - second column = 100px 
+               - third column is automatically calculated */
+
+            /* grid-template-rows: 100px 100px 100px; */
+            /* Creates 3 rows, each of height 100px */
+
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* Creates a flexible grid with 3 columns:
+               - first and third columns get 1 fraction of space
+               - second column gets 2 fractions (twice the size) */
+
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* Creates 4 equal columns, each taking 1 fraction of available space */
+
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            /* Creates 4 columns where each column:
+               - has a minimum width of 100px 
+               - can grow up to 1 fraction of available space */
+
+            grid-template-columns: repeat(4, 80px); /* Defines 4 columns, each 80px wide */
+            grid-template-rows: repeat(2, 80px); /* Defines 2 rows, each 80px tall */
+
+            /* gap: 34px; */
+            /* Adds a uniform 34px gap between both rows and columns */
+
+            row-gap: 10px; /* Adds a 10px gap between rows */
+            column-gap: 40px; /* Adds a 40px gap between columns */
+
+            justify-items: center; /* Centers the content of each grid item horizontally */
+            align-items: center; /* Centers the content of each grid item vertically */
+            place-content: center; /* Centers the entire grid inside the container */
+        }
+
+        .item {
+            border: 2px solid red; /* Adds a red border to each grid item */
+            height: 55px; /* Sets each grid item's height to 55px */
+            width: 55px; /* Sets each grid item's width to 55px */
+        }
+
+        .item-4 {
+            /* grid-row: 1/2; */
+            /* Places this item in row 1 */
+
+            /* grid-column: first/second; */
+            /* Places this item between the 'first' and 'second' named columns (if used) */
+        }
+
+        .item-1 {
+            /* grid-row: 1/2; */
+            /* Places this item in row 1 */
+
+            /* Alternative way to define row placement */
+            /* grid-row-start: 1;
+               grid-row-end: 2; */
+
+            /* Same effect as above */
+            /* grid-column: 1/2; */
+            /* Places this item in the first column */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div> <!-- First grid item -->
+        <div class="item">2</div> <!-- Second grid item -->
+        <div class="item">3</div> <!-- Third grid item -->
+        <div class="item item-4">4</div> <!-- Fourth grid item -->
+        <div class="item">5</div> <!-- Fifth grid item -->
+    </div>
+</body>
+
+</html>

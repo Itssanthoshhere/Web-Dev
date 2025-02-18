@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card Design</title>
+    
+    <style>
+        /* Importing Google Fonts for better typography */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling the body */
+        body {
+            background-color: gray; /* Setting background color */
+            padding: 45px; /* Adding padding for spacing */
+            display: flex; /* Using flexbox for layout */
+        }
+
+        /* Styling the card container */
+        .card {
+            background-color: white; /* White background for contrast */
+            width: 198px; /* Fixed width for consistency */
+            border-radius: 7px; /* Rounded corners for aesthetics */
+            padding: 0 0 34px 0; /* Padding to add space inside */
+            margin: 4px; /* Adding margin to separate multiple cards */
+        }
+
+        /* Styling the image container */
+        .image {
+            padding: 5px; /* Spacing around the image */
+        }
+
+        /* Styling the image inside the card */
+        .image img {
+            border-radius: 7px; /* Rounded corners for the image */
+        }
+
+        /* Styling the content section */
+        .content {
+            padding: 7px 13px; /* Adding space around the text */
+            font-family: 'Poppins', sans-serif; /* Using Poppins font */
+        }
+
+        /* Styling the paragraph inside the content */
+        .content p {
+            font-size: 9px; /* Setting font size */
+            color: gray; /* Light gray color for text */
+        }
+
+        /* Styling the capsules (tags) section */
+        .capsules {
+            padding: 0 28px 0 14px; /* Adding padding */
+        }
+
+        /* Styling individual capsules */
+        .capsules span {
+            border: 1px solid gray; /* Adding border */
+            padding: 0px 6px; /* Inner padding */
+            border-radius: 7px; /* Rounded corners */
+            font-size: 8px; /* Small font size */
+            font-family: 'Baloo Bhai 2', sans-serif; /* Different font for styling */
+        }
+
+        /* Styling the button container */
+        .button {
+            text-align: center; /* Centering the button */
+        }
+
+        /* Styling the button */
+        .button button {
+            padding: 7px 15px; /* Padding for button */
+            border-radius: 15px; /* Rounded corners */
+            background-color: rgb(216, 236, 253); /* Light blue background */
+            color: rgb(14, 150, 234); /* Blue text */
+            font-size: 10px; /* Small font size */
+            margin-top: 7px; /* Space above button */
+            border: none; /* Removing default border */
+            font-weight: bold; /* Making text bold */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        /* Styling button hover effect */
+        .button button:hover {
+            background-color: rgb(194, 225, 246); /* Slightly darker blue */
+            color: rgb(10, 136, 214); /* Darker blue text */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- First Card -->
+    <div class="card">
+        <!-- Image Section -->
+        <div class="image">
+            <img width="188"
+                src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Nature Image">
+        </div>
+
+        <!-- Capsules (Tags) -->
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <h2>Sandy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo numquam vel cumque ullam alias sequi
+                suscipit velit! Enim cumque aperiam tempore tenetur?</p>
+        </div>
+
+        <!-- Button Section -->
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="card">
+        <div class="image">
+            <img width="188"
+                src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Nature Image">
+        </div>
+
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+
+        <div class="content">
+            <h2>Sandy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo numquam vel cumque ullam alias sequi
+                suscipit velit! Enim cumque aperiam tempore tenetur?</p>
+        </div>
+
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Third Card -->
+    <div class="card">
+        <div class="image">
+            <img width="188"
+                src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Nature Image">
+        </div>
+
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+
+        <div class="content">
+            <h2>Sandy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo numquam vel cumque ullam alias sequi
+                suscipit velit! Enim cumque aperiam tempore tenetur?</p>
+        </div>
+
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        /* The container holding the cards */
+        .cards {
+            border: 2px solid black;
+            display: flow-root; /* Ensures that floated elements are properly contained */
+        }
+
+        /* Floating the image to the left */
+        img {
+            float: left;
+        }
+
+        /* Styling for each card */
+        .card {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* The third card will have a different background color and will clear the float */
+        .card:nth-child(3) {
+            background-color: aqua;
+            clear: both; /* Clears both left and right floating elements */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <!-- Floating image -->
+        <img src="https://media.istockphoto.com/id/928826678/photo/two-men-relaxing-and-fishing.jpg?s=2048x2048&w=is&k=20&c=fSG5LG9kxLNzjG9_YI1bXdz3-gD7UW2e2bd9arD5Vm8="
+            alt="Fishing Image" width="230">
+        
+        <!-- First Card -->
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi fugiat ab tenetur praesentium sequi,
+                nisi nesciunt officiis magnam ut at voluptatibus sapiente ducimus deleniti esse alias nihil.</p>
+        </div>
+        
+        <!-- Second Card -->
+        <div class="card">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore explicabo dignissimos a et
+            sapiente sunt assumenda cupiditate veniam cumque ipsa? 
+        </div>
+        
+        <!-- Third Card with 'clear: both' applied -->
+        <div class="card">
+            Card 3
+        </div>
+    </div>
+</body>
+
+</html>

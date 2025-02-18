@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Let's Learn It</title>
+</head>
+
+<body>
+    <!-- Form section starts -->
+    <form action="post"> <!-- The 'action' attribute specifies where the form data is sent after submission -->
+
+        <!-- Username input field -->
+        <div>
+            <label for="Username"> Enter your Username </label>
+            <!-- Text input for username with a placeholder and autofocus -->
+            <input type="text" id="Username" name="Username" placeholder="Enter your Username" autofocus>
+        </div>
+
+        <!-- Gender selection using radio buttons -->
+        <div>
+            <!-- Radio button for selecting Male -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <!-- Radio button for selecting Female -->
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- Comment section using a textarea -->
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <!-- Multiline text input using textarea -->
+            <textarea name="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Dropdown selection for choosing a fruit -->
+        <div>
+            <label for="fruits">Select your favorite fruit:</label>
+            <select name="fruits" id="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+            </select>
+        </div>
+
+    </form>
+    <!-- Form section ends -->
+</body>
+
+</html>

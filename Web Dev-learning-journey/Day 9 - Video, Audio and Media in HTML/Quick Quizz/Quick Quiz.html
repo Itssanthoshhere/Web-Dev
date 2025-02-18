@@ -1,0 +1,45 @@
+<!-- 
+    𝐐𝐮𝐢𝐜𝐤 𝐐𝐮𝐢𝐳:
+    Create a website which shows video of different category and audios of different categories. You can use youtube videos in an iframe using YouTube's embedding feature. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video & Audio Categories</title>
+</head>
+
+<body>
+    <h1>Video & Audio Categories</h1>
+
+    <!-- Video Section -->
+    <h2>Video Category: Tutorials</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/abcd1234" title="HTML Tutorial"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <h2>Video Category: Music</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/efgh5678" title="Music Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <!-- Audio Section -->
+    <h2>Audio Category: Music</h2>
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Audio Category: Podcast</h2>
+    <audio controls>
+        <source src="podcast.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+
+</html>

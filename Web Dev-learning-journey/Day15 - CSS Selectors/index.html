@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* 
+           CSS Selectors Example 
+           ----------------------
+           This stylesheet demonstrates different types of CSS selectors, including 
+           element, class, ID, child, descendant, universal, and pseudo-selectors.
+        */
+
+        /* ✅ Element Selector: Applies styles to all <div> elements */
+        div {
+            background-color: red; /* Sets the background color of all divs to red */
+        }
+
+        /* ✅ Class Selector: Targets elements with the class "red" */
+        .red {
+            background-color: red; /* Sets background color for elements with class 'red' */
+        }
+
+        /* ✅ ID Selector: Targets the element with id "green" */
+        #green {
+            background-color: green; /* Sets background color for the element with id 'green' */
+        }
+
+        /* ✅ Child Selector: Styles only direct <p> children inside a <div> */
+        div > p {
+            background-color: brown; /* Applies brown background only to direct <p> children of <div> */
+        }
+
+        /* ✅ Descendant Selector: Styles all <p> inside a <div> (including nested ones) */
+        div p {
+            color: blue; /* Sets text color to blue */
+            background-color: brown; /* Sets background color to brown */
+        }
+
+        /* ✅ Universal Selector: Applies to all elements on the page */
+        * {
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+        }
+
+        /* ✅ Pseudo Selectors for Links */
+
+        /* Changes color of visited links */
+        a:visited {
+            color: orange;
+        }
+
+        /* Changes color of unvisited links */
+        a:link {
+            color: green;
+        }
+
+        /* Changes color when the link is clicked (active state) */
+        a:active {
+            color: red;
+        }
+
+        /* Changes background color when the user hovers over a link */
+        a:hover {
+            background-color: yellow;
+        }
+
+        /* ✅ Pseudo Selector: Targets the first <p> child inside its parent */
+        p:first-child {
+            background-color: aqua; /* Sets background color of the first paragraph */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main section with class 'one' -->
+    <main class="one">
+        <p>I'm first</p> <!-- This will get a light blue (aqua) background due to p:first-child -->
+        <p>I'm second</p>
+    </main>
+
+    <!-- A div with the class "red", will have a red background -->
+    <div class="red">
+        I'm a div
+        <article>
+            <p>I am a para inside div</p> <!-- This paragraph is inside an <article> inside <div>, so it will be blue text with brown background -->
+        </article>
+    </div>
+
+    <!-- A div with the ID "green", will have a green background -->
+    <div id="green">
+        I'm another div
+    </div>
+
+    <!-- Links to test pseudo-selectors -->
+    <a href="http://www.google.com">Go to Google</a>
+    <a href="http://www.linkedin2.com">Go to LinkedIn</a>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the .box class */
+        .box {
+            border: 2px solid blue;  /* Adds a blue border around the box */
+            display: inline-block;  /* Allows the box to be inline while maintaining block-level styling */
+            width: 344px;  /* Sets a fixed width */
+            padding: 45px;  /* Adds padding inside the box */
+            margin: 34px;  /* Adds spacing around the box */
+        }
+
+        /* Styling for the .box1 class */
+        .box1 {
+            /* Uncommenting the below line will completely remove the element from the layout */
+            /* display: none; */
+
+            /* Uncommenting the below line will hide the element but retain its space in the layout */
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Link to MDN documentation for reference -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <!-- This div has both .box and .box1 classes -->
+    <!-- If display: none is enabled in .box1, this box will not appear -->
+    <!-- If visibility: hidden is enabled, it will be hidden but still take up space -->
+    <div class="box box1">
+        I am a box
+    </div>
+
+    <!-- Another box that is visible since .box1 does not affect it -->
+    <div class="box">also a nice box</div>
+
+    <!-- Two inline span elements -->
+    <span>I am a good</span>
+    <span>boy</span>
+</body>
+
+</html>

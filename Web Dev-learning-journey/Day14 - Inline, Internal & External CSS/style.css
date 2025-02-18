@@ -1,0 +1,9 @@
+/* Styling the <h1> element */
+
+/* Set the background color of the <h1> to red */
+h1 {
+    background-color: red;  
+
+    /* Change the text color of <h1> to yellow */
+    color: yellow;  
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        /* Sets the default background color of the body to red */
+        body {
+            background-color: red;
+        }
+
+        /* Applies styles when the screen is in portrait mode */
+        @media screen and (orientation: portrait) {
+            body {
+                border: 2px solid black; /* Adds a black border to the body */
+            }
+        }
+
+        /* Applies styles when the screen width is 455px or less */
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: blue; /* Changes background color to blue for small screens */
+            }
+
+            .boxes {
+                flex-direction: column; /* Stacks the boxes vertically on small screens */
+            }
+        }
+
+        /* The general styling for the container of boxes */
+        .boxes {
+            display: flex; /* Displays boxes in a row by default */
+        }
+
+        /* Styling for each box */
+        .box {
+            width: 344px;  /* Box width */
+            height: 344px; /* Box height */
+            background-color: steelblue; /* Box color */
+            padding: 3px; /* Inner spacing */
+            margin: 3px; /* Space between boxes */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main content of the page -->
+    <div> 
+        Hey I am red body guy! <!-- Default text inside the body -->
+    </div>
+
+    <!-- Container for the boxes -->
+    <div class="boxes">
+        <div class="box"></div>  <!-- Individual box -->
+        <div class="box"></div>  <!-- Individual box -->
+        <div class="box"></div>  <!-- Individual box -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.red {
+    /* This class sets the text color to red for any element with the 'red' class. */
+    color: red;
+}
+    
+
+.bg-yellow {
+    /* This class applies a yellow background to any element with the 'bg-yellow' class. */
+    background-color: yellow;
+}
+
+#firstdiv {
+    /* This is an ID selector targeting the element with the ID 'firstdiv'. 
+       The background color is commented out, meaning it won't apply this style. 
+       IDs are unique, so this style would only affect one element. */
+    /* background-color: red; */
+    
+}

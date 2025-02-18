@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and Text</title> 
+
+    <style>
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
+        /* Styling for h1 */
+        h1 {
+            font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* Styling for paragraphs */
+        p {
+            font-family: 'Baloo Bhai 2', sans-serif; /* Applying the imported font */
+            font-size: 20px;  /* Setting font size */
+            /* font-style: italic;  Enables italic text */
+            /* font-weight: 500;  Sets the font weight (thin, normal, bold, etc.) */
+        }
+
+        /* Styling for h2 */
+        h2 {
+            text-align: center;  /* Centers the text */
+            text-transform: uppercase;  /* Converts text to uppercase */
+            text-decoration: underline;  /* Underlines the text */
+            text-decoration-color: blue; /* Sets underline color */
+            /* text-decoration-style: dotted;   Changes underline style */
+            text-decoration-thickness: 7px; /* Adjusts thickness of underline */
+            /* text-indent: 45px;  Indents the first line */
+        }
+
+        /* Styling for text overflow and word breaking */
+        .lorem {
+            border: 2px solid red;  /* Adds a red border */
+            width: 145px;  /* Restricts width to 145px */
+            word-break: break-all;  /* Breaks long words to fit within the box */
+            /* text-overflow: ellipsis;   Adds "..." when text overflows */
+            /* overflow: hidden;   Hides overflowing content */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Main heading -->
+        <h1>Fonts</h1>
+        <h2>About Fonts</h2>
+
+        <!-- Paragraph with default font -->
+        <p>This is a video on fonts</p>
+
+        <!-- Paragraph with text overflow handling -->
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi accusamus quas itaque molestias dolorem quisquam quod, adipisci maxim dolore, mollitia illo officia deserunt voluptatem iure qui. Fugit aliquam possimus aperiam commodi 
+            eum amet veniam at vel. Necessitatibus asperiores eos amet laborum dolor, ipsum porro!
+        </p>
+    </div>
+</body>
+</html>

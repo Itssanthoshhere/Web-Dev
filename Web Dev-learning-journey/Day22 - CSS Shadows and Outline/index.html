@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outline</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            /* Creates a black border around the box */
+            padding: 34px;
+            /* Adds space inside the box */
+
+            /* Creates a shadow effect around the box */
+            /* Syntax: box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+            box-shadow: 5px 5px 15px 5px #888888;
+        }
+
+        .text-element {
+            /* Adds a red shadow behind the text */
+            /* Syntax: text-shadow: horizontal-offset vertical-offset blur-radius color; */
+            text-shadow: 2px 2px 4px #f10a0a;
+
+            /* Creates an outline around the element (does not take up space) */
+            outline: 2px solid black;
+
+            /* Adds a border around the element (takes up space in layout) */
+            border: 2px solid green;
+
+            /* Moves the outline away from the border */
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box element with border and shadow -->
+    <div class="box">
+        I am box
+    </div>
+
+    <!-- Text element with text-shadow, border, and outline -->
+    <p class="text-element">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quibusdam eos, distinctio beatae veritatis
+        incidunt!
+    </p>
+</body>
+
+</html>

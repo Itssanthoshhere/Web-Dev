@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* Defining CSS Variables at the root level */
+        :root {
+            --primary-color: rgb(238, 255, 0); /* Yellow */
+            --secondary-color: rgb(164, 120, 173); /* Purple */
+            --default-padding: 40px;
+            --default-opacity: 0.4;
+        }
+
+        /* Resetting margin, padding and setting box-sizing to border-box */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling navigation bar with primary color */
+        .nav {
+            background-color: var(--primary-color);
+        }
+
+        /* Styling unordered list to display items in a flex container */
+        ul {
+            display: flex;
+        }
+
+        /* Styling list items inside navigation */
+        ul li {
+            opacity: var(--default-opacity); /* Applying default opacity */
+            list-style: none; /* Removing bullet points */
+            padding: var(--default-padding); /* Using default padding */
+            /* border: 2px solid var(--secondary-color); */ /* Border with secondary color */
+            margin-right: 10px; /* Adding spacing between items */
+            cursor: pointer; /* Changing cursor to pointer for better UX */
+        }
+
+        /* Changing background color of the first list item */
+        ul li:first-child {
+            --primary-color: rgb(243, 87, 8); /* Red color (local scope) */
+            background-color: var(--primary-color, blue); /* Applying local variable, defaulting to blue */
+        }
+
+        /* Styling container with secondary color and padding */
+        .container {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            color: white; /* Text color set to white for contrast */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <!-- Content Container -->
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestias quidem ducimus debitis iure enim
+        expedita repellendus, nisi in. Dicta, nemo quod unde nisi porro, accusamus aliquid error rerum sequi ab
+        reiciendis nobis exercitationem! Atque dolorum libero possimus ipsam incidunt quas itaque ipsum mollitia neque!
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists Styling</title>
+    <style>
+        /* Styling for the navigation menu */
+        nav ul {
+            display: flex; /* Makes the list items appear in a horizontal row */
+        }
+
+        nav ul li {
+            padding: 23px; /* Adds spacing inside each list item */
+            display: flex; /* Applies flexbox to list items (can be useful for alignment) */
+            list-style: none; /* Removes default bullets from the list */
+
+            /* list-style: devanagari; */ /* Uses Devanagari numerals (१, २, ३) for ordered lists */
+            /* list-style-type: "🔥"; */ /* Attempts to use an emoji as a bullet (not fully supported) */
+            /* background-color: yellow; */ /* Adds a yellow background to each list item */
+            /* list-style-position: inside; */ /* Moves bullets inside the list item content area */
+            /* border: 2px solid black; */ /* Adds a solid black border around each list item */
+            
+            /* Custom bullet with an image and inside positioning */
+            /* list-style: disc inside url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+        
+            /* Replaces bullets with a custom image */
+            /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar with a list of links -->
+    <nav>
+        <ul>
+            <li>Home</li> <!-- First menu item -->
+            <li>About</li> <!-- Second menu item -->
+            <li>Contact</li> <!-- Third menu item -->
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+/* ===== WRAPPER STYLES ===== */
+.wrap {
+    margin: 30px auto;  /* Centers the container and adds space around it */
+    max-width: 1000px;  /* Limits the width to 1000px */
+    width: 90vw;  /* Sets width relative to the viewport */
+    display: flex;  /* Uses Flexbox layout */
+    flex-flow: row wrap;  /* Aligns items in rows and wraps them if necessary */
+    justify-content: center;  /* Centers items horizontally */
+    font-family: sans-serif;  /* Uses a clean sans-serif font */
+}
+
+/* ===== BOX STYLES ===== */
+.box {
+    width: calc(20%);  /* Each box takes 20% width of the container */
+    margin: 20px 20px;  /* Adds spacing between boxes */
+    background: #ddd;  /* Light gray background */
+    cursor: pointer;  /* Shows pointer cursor on hover */
+    color: #FFF;  /* White text */
+    text-align: center;  /* Centers text horizontally */
+    line-height: 130px;  /* Centers text vertically */
+}
+
+/* Adds a semi-transparent blue background */
+.blue {
+    background-color: rgba(56, 207, 248, 0.5);
+}
+
+/* ===== TRANSFORMATION EFFECTS ===== */
+
+/* ==== SCALE TRANSFORMATIONS ==== */
+
+/* No transformation initially */
+.scaleX {
+    transform: scaleX(1);
+    transition: transform 0.5s ease;  /* Smooth transition over 0.5 seconds */
+}
+
+/* Hover effect: Doubles the width of the element */
+.box:hover .scaleX {
+    transform: scaleX(2);
+}
+
+.scaleY {
+    transform: scaleY(1);
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect: Doubles the height of the element */
+.box:hover .scaleY {
+    transform: scaleY(2);
+}
+
+.scale {
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect: Enlarges the element by 1.5 times in both directions */
+.box:hover .scale {
+    transform: scale(1.5, 1.5);
+}
+
+/* ==== TRANSLATE (MOVEMENT) ==== */
+
+/* No movement initially */
+.translateX {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+/* Moves the element 2em to the right on hover */
+.box:hover .translateX {
+    transform: translateX(2em);
+}
+
+.translateY {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+/* Moves the element 2em downward on hover */
+.box:hover .translateY {
+    transform: translateY(2em);
+}
+
+.translate {
+    transform: translate(0, 0);
+    transition: transform 0.5s ease;
+}
+
+/* Moves 2em right and 2em down on hover */
+.box:hover .translate {
+    transform: translate(2em, 2em);
+}
+
+/* ==== ROTATION ==== */
+
+/* No rotation initially */
+.rotate {
+    transform: rotate(0);
+    transition: transform 0.5s ease;
+}
+
+/* Rotates the element 270 degrees on hover */
+.box:hover .rotate {
+    transform: rotate(270deg);
+}
+
+/* ==== SKEW (SHEARING EFFECT) ==== */
+
+.skew {
+    transform: skew(0deg, 0deg);
+    transition: transform 0.5s ease;
+}
+
+/* Skews the element 30 degrees in X and 20 degrees in Y on hover */
+.box:hover .skew {
+    transform: skew(30deg, 20deg);
+}
+
+.skewX {
+    transform: skewX(0deg);
+    transition: transform 0.5s ease;
+}
+
+/* Skews only along the X-axis */
+.box:hover .skewX {
+    transform: skewX(30deg);
+}
+
+.skewY {
+    transform: skewY(0deg);
+    transition: transform 0.5s ease;
+}
+
+/* Skews only along the Y-axis */
+.box:hover .skewY {
+    transform: skewY(30deg);
+}
+
+/* ==== MATRIX TRANSFORMATIONS (Advanced) ==== */
+
+/* Initial state using matrix transformation */
+.matrix {
+    transform: matrix(1, 1, 1, 1, 0, 0);
+    transition: transform 0.5s ease;
+}
+
+/* Changes matrix values on hover to flip the element */
+.box:hover .matrix {
+    transform: matrix(1, -1, 0, 1, 0, 0);
+}
+
+/* ==== 3D TRANSFORMATIONS ==== */
+
+/* Uses a 3D matrix transformation */
+.matrix3d {
+    transform: matrix3d(1);
+    transition: transform 0.5s ease;
+}
+
+/* Changes 3D matrix values to rotate and move in 3D space */
+.box:hover .matrix3d {
+    transform: matrix3d(0.853, 0.5, 0.146, 0, -0.5, 0.707, 0.5, 0, 0.146, -0.5, 0.853, 0, 22.63, -20.32, 101.37, 1);
+}
+
+/* Moves element in 3D space and rotates it */
+.translate3d {
+    transform: translate3d(1px, 1px, 1px);
+    transition: transform 0.5s ease;
+}
+
+.box:hover .translate3d {
+    transform: translate3d(1px, 1px, 50px) rotate3d(3, 2, 2, 90deg);
+}
+
+/* Rotates around the Y-axis with perspective */
+.rotateY {
+    transform: perspective(500px) rotateY(0deg);
+    transition: transform 0.5s ease;
+}
+
+/* On hover: Rotates the element 45 degrees along the Y-axis */
+.box:hover .rotateY {
+    transform: perspective(500px) rotateY(45deg);
+}
+
+/* Rotates around the X-axis with perspective */
+.rotateX {
+    transform: perspective(500px) rotateX(0deg);
+    transition: transform 0.5s ease;
+}
+
+/* On hover: Rotates the element 45 degrees along the X-axis */
+.box:hover .rotateX {
+    transform: perspective(500px) rotateX(45deg);
+}
+
+/* Moves element along the Z-axis */
+.translateZ {
+    transform: translateZ(0);
+    transition: transform 0.5s ease;
+}
+
+/* On hover: Moves and rotates in 3D space */
+.box:hover .translateZ {
+    transform: rotate3d(3, 2, 2, 90deg) translateZ(50px);
+}

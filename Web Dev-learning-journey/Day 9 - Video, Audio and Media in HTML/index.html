@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive on all device sizes -->
+    <title>Video, Audio and Media</title>
+    <!-- The title of the webpage -->
+</head>
+
+<body>
+    <video src="video.mp4" height="200" autoplay loop muted poster="sky.jpg"></video>
+    <!-- Embeds a video. Attributes:
+         - 'src': the source file for the video (video.mp4).
+         - 'height': sets the height of the video.
+         - 'autoplay': plays the video automatically when the page loads.
+         - 'loop': plays the video in a continuous loop.
+         - 'muted': mutes the video by default.
+         - 'poster': displays an image (sky.jpg) before the video is loaded. -->
+
+    <audio src="sample.mp3" controls loop></audio>
+    <!-- Embeds an audio file. Attributes:
+         - 'src': the source file for the audio (sample.mp3).
+         - 'controls': provides play, pause, and volume control buttons.
+         - 'loop': plays the audio file in a continuous loop. -->
+
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+    <!-- Embeds an SVG (Scalable Vector Graphics) image. 
+         - 'circle': draws a circle.
+         - 'cx' and 'cy': specify the center of the circle (x and y coordinates).
+         - 'r': radius of the circle.
+         - 'stroke' and 'stroke-width': define the outline color and width of the circle.
+         - 'fill': sets the fill color of the circle (red). -->
+
+    <img src="img.svg" alt="My Svg Image">
+    <!-- Embeds an image (img.svg). The 'alt' attribute provides alternative text for accessibility. -->
+
+    <iframe src="https://www.codewithharry.com/tutorial/html-iframes/#google_vignette" width="350" height="250"></iframe>
+    <!-- Embeds an external webpage within the current page using an iframe. Attributes:
+         - 'src': the URL of the embedded page.
+         - 'width' and 'height': set the size of the iframe (350x250). -->
+
+    <iframe width="560" height="250"
+        src="https://www.youtube.com/embed/XZwBNDGuWGU?si=uonJPI_4tZNTBhvS&amp;start=691"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Embeds a YouTube video using an iframe. Attributes:
+         - 'src': the YouTube video URL, with specific settings (starts at 691 seconds).
+         - 'width' and 'height': dimensions of the iframe.
+         - 'frameborder': removes the border around the iframe.
+         - 'allow': enables specific features like autoplay, clipboard write, etc.
+         - 'allowfullscreen': allows the video to go fullscreen.
+         - 'referrerpolicy': controls referrer information sent with the request (security measure). -->
+</body>
+
+</html>

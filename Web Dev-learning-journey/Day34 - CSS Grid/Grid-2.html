@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid-2</title>
+    <style>
+        .container {
+            border: 2px solid black; /* Adds a black border around the container */
+            display: grid; /* Enables CSS Grid */
+            
+            /* Defines the layout using named grid areas */
+            grid-template-areas: 
+                "nav nav nav"       /* First row: 'nav' spans all 3 columns */
+                "side article article" /* Second row: 'side' in first column, 'article' in the rest */
+                "footer footer footer"; /* Third row: 'footer' spans all 3 columns */
+        }
+        
+        .item {
+            border: 2px solid red; /* Adds a red border to each grid item */
+            height: 55px; /* Sets each grid item's height to 55px */
+        }
+        
+        .item-1 {
+            grid-area: nav; /* Places this item in the 'nav' section */
+            background-color: aqua; /* Sets background color */
+        }
+        
+        .item-2 {
+            grid-area: side; /* Places this item in the 'side' section */
+            background-color: beige; /* Sets background color */
+        }
+        
+        .item-3 {
+            grid-area: article; /* Places this item in the 'article' section */
+            background-color: azure; /* Sets background color */
+        }
+
+        .item-4 {
+            grid-area: footer; /* Places this item in the 'footer' section */
+        }
+
+        .item-5 {
+            grid-area: nav; /* 🚨 Conflict: This is also placed in 'nav', causing layout issues */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div> <!-- First grid item (Nav section) -->
+        <div class="item item-2">2</div> <!-- Second grid item (Side section) -->
+        <div class="item item-3">3</div> <!-- Third grid item (Article section) -->
+        <div class="item item-4">4</div> <!-- Fourth grid item (Footer section) -->
+        <div class="item item-5">5</div> <!-- 🚨 This also belongs to 'nav', causing conflicts -->
+    </div>
+</body>
+</html>

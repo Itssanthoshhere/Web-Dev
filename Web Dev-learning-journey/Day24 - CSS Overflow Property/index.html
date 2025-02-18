@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+    <style>
+        .box {
+            width: 30vw; /* Box width is 30% of the viewport width */
+            height: 30vh; /* Box height is 30% of the viewport height */
+            border: 2px solid red; /* Adds a red border around the box */
+
+            /* overflow: auto; */ /* Adds scrollbars only when content overflows */
+            /* overflow-x: hidden; */ /* Hides horizontal overflow (no scrolling) */
+            /* overflow-y: scroll; */ /* Always shows vertical scrollbar, even when not needed */
+            overflow: auto hidden; /* Allows vertical scrolling but hides horizontal overflow */
+
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
+            /* text-overflow: ellipsis; */ /* Replaces overflowed text with "..." */
+            text-overflow: clip; /* Cuts off text at the boundary without showing "..." */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a good boy and I love to write Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem repellendus
+        itaque repellat dolor quibusdam iste odit, fugit eos accusamus quidem praesentium quo aut, quia blanditiis
+        vitae? Labore excepturi inventore debitis atque a, accusantium cupiditate? Obcaecati beatae rerum sequi ipsum
+        corrupti reprehenderit quasi in laudantium est.
+    </div>
+</body>
+
+</html>
