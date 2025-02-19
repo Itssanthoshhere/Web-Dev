@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Transitions</title>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <title>CSS Transitions</title> <!-- Title of the webpage -->
     <style>
-        .container{
-            background-color: antiquewhite;
-            width: 50vw;
-            height: 40vh;
+
+        /* ======= CONTAINER STYLES ======= */
+        .container {
+            background-color: antiquewhite; /* Light beige background color */
+            width: 50vw; /* 50% of the viewport width */
+            height: 40vh; /* 40% of the viewport height */
         }
 
-        .box{
-            background-color: aquamarine;
-            width: 5vw;
-            height: 4vh;
-            /* transition-property: background-color, transform;
-            transition-duration: 3s;
-            transition-timing-function: ease-in-out; */
-            /* transition-delay: 1s; */
+        /* ======= BOX STYLES ======= */
+        .box {
+            background-color: aquamarine; /* Light greenish-blue color */
+            width: 5vw; /* 5% of the viewport width */
+            height: 4vh; /* 4% of the viewport height */
+            
+            /* TRANSITION EFFECTS */
+            /* 
+            - Specifies which properties will change with an animation.
+            - transition-property: background-color, transform; 
+              → The background color and transform properties will change.
+            - transition-duration: 3s; 
+              → The animation will last 3 seconds.
+            - transition-timing-function: ease-in-out; 
+              → The transition will start slow, speed up, and then slow down at the end.
+            - transition-delay: 1s; 
+              → The transition starts after a 1-second delay.
+            */
+
+            /* Shorter alternative using transition shorthand */
             transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
+            /*
+            - 'all' → Applies transition to all properties that support animation.
+            - '3s' → Transition duration is 3 seconds.
+            - 'cubic-bezier(0.09, 0.5, 0, 0.99)' → Custom easing function for smooth acceleration and deceleration.
+            - '1s' → 1-second delay before transition starts.
+            */
         }
 
-        .translate{
+        /* ======= TRANSLATE CLASS (TRIGGERED TRANSFORMATION) ======= */
+        .translate {
             transform: translateX(10vw) translateY(10vh) scale(2);
-            background-color: blue;
+            /* Moves the box:
+                - 10vw (viewport width) to the right
+                - 10vh (viewport height) downward
+                - Doubles its size (scale(2)) */
+
+            background-color: blue; /* Changes background color to blue */
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box translate"></div>
+    <div class="container"> <!-- Parent container to hold the box -->
+        <div class="box translate"></div>  <!-- Box element that moves & changes color -->
     </div>
 </body>
 </html>
