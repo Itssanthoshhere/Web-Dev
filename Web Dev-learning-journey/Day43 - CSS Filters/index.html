@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        /* CSS Filters allow you to apply visual effects to images */
+
+        /* Example (Commented Out): 
+           This applies a blur effect to all images
+           Higher values increase the blurriness
+        */
+        /* img {
+            filter: blur(10px);
+        } */
+
+        /* Applies a 50% opacity to the image, making it semi-transparent */
+        .img1 {
+            /* Adjust brightness (Commented Out) */
+            /* filter: brightness(122%); */
+
+            filter: opacity(0.5);
+        }
+
+        /* Converts the image to 50% grayscale (partially black & white) */
+        .img2 {
+            filter: grayscale(50%);
+        }
+
+        /* Applies a sepia effect, making the image look vintage (100% full effect) */
+        .img3 {
+            filter: sepia(100%);
+        }
+
+        /* Inverts the colors of the image (1 = 100% inversion) */
+        .img4 {
+            filter: invert(1);
+        }
+
+        /* Styling for the container to align images properly */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Adds spacing between images */
+        }
+
+        /* Ensures all images have a set width and height for consistency */
+        img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Image with opacity effect -->
+        <img class="img1" src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg" alt="Opacity Filter Example">
+
+        <!-- Image with grayscale effect -->
+        <img class="img2" src="http://tse3.mm.bing.net/th?id=OIP.JoxaiKhpKnS1WPB6l-GOEQHaEK&pid=Api&P=0&h=180" alt="Grayscale Filter Example">
+
+        <!-- Image with sepia effect -->
+        <img class="img3" src="https://tse3.mm.bing.net/th?id=OIP.xWM2K_ka58bZ_tTgKNd9_AHaEo&pid=Api&P=0&h=180" alt="Sepia Filter Example">
+
+        <!-- Image with invert effect -->
+        <img class="img4" src="https://tse3.mm.bing.net/th?id=OIP.QghJfUlTwSWzfSNZIeovMwHaEh&pid=Api&P=0&w=300&h=300" alt="Invert Filter Example">
+    </div>
+
+</body>
+
+</html>
