@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+
+    <style>
+        /* ====== STYLES FOR THE CONTAINER DIV ====== */
+        .container {
+            height: 488px;  /* Sets the height of the container */
+            width: 466px;   /* Sets the width of the container */
+            border: 2px solid black;  /* Adds a black border around the container */
+            
+            /* Optional background color (currently commented out) */
+            /* background-color: azure; */
+
+            /* Centers the background image both horizontally and vertically */
+            background-position: center center;
+
+            /* Ensures the background image is clipped inside the border */
+            background-clip: border-box;
+
+            /* Sets the background image */
+            background-image: url("https://us.123rf.com/450wm/progressman/progressman1909/progressman190900115/130695651-woman-in-black-coat-walking-along-the-sea.jpg?ver=6");
+
+            /* Ensures the background image does not repeat */
+            background-repeat: no-repeat;
+        }
+
+        /* ====== STYLES FOR THE IMAGE (IF USED) ====== */
+        img {
+            width: 466px;  /* Sets the width of the image to match the container */
+            height: 488px;  /* Sets the height of the image to match the container */
+
+            /* Determines how the image is resized to fit the container */
+            object-fit: contain;  /* The image fits within the container without cropping */
+            
+            /* Other object-fit values (commented out) */
+            /* object-fit: cover;  Ensures the image covers the entire container, may crop */
+            /* object-fit: fill;  Stretches the image to fit the container, may distort */
+
+            /* Positions the image inside the container */
+            object-position: 10px 20px;  /* Moves the image 10px right and 20px down */
+            
+            /* Alternative positioning (commented out) */
+            /* object-position: bottom right;  Aligns image to the bottom right */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main container with background image -->
+    <div class="container">
+        <!-- Image inside container (currently commented out) -->
+        <!-- <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt=""> -->
+    </div>
+
+</body>
+
+</html>
