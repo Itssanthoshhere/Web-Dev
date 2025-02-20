@@ -1,63 +1,176 @@
+<!-- Exercise - 07 | Design the Grid
+     Design this Website's body using Grid 
+     Website reference: https://bit.ly/UltraEdit-CWH
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
-    <title>CSS Transitions</title> <!-- Title of the webpage -->
-    <style>
+    <!-- Metadata for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* ======= CONTAINER STYLES ======= */
-        .container {
-            background-color: antiquewhite; /* Light beige background color */
-            width: 50vw; /* 50% of the viewport width */
-            height: 40vh; /* 40% of the viewport height */
-        }
+    <!-- Title of the webpage -->
+    <title>Download UltraEdit text editor for Windows</title>
 
-        /* ======= BOX STYLES ======= */
-        .box {
-            background-color: aquamarine; /* Light greenish-blue color */
-            width: 5vw; /* 5% of the viewport width */
-            height: 4vh; /* 4% of the viewport height */
-            
-            /* TRANSITION EFFECTS */
-            /* 
-            - Specifies which properties will change with an animation.
-            - transition-property: background-color, transform; 
-              → The background color and transform properties will change.
-            - transition-duration: 3s; 
-              → The animation will last 3 seconds.
-            - transition-timing-function: ease-in-out; 
-              → The transition will start slow, speed up, and then slow down at the end.
-            - transition-delay: 1s; 
-              → The transition starts after a 1-second delay.
-            */
-
-            /* Shorter alternative using transition shorthand */
-            transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
-            /*
-            - 'all' → Applies transition to all properties that support animation.
-            - '3s' → Transition duration is 3 seconds.
-            - 'cubic-bezier(0.09, 0.5, 0, 0.99)' → Custom easing function for smooth acceleration and deceleration.
-            - '1s' → 1-second delay before transition starts.
-            */
-        }
-
-        /* ======= TRANSLATE CLASS (TRIGGERED TRANSFORMATION) ======= */
-        .translate {
-            transform: translateX(10vw) translateY(10vh) scale(2);
-            /* Moves the box:
-                - 10vw (viewport width) to the right
-                - 10vh (viewport height) downward
-                - Doubles its size (scale(2)) */
-
-            background-color: blue; /* Changes background color to blue */
-        }
-
-    </style>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container"> <!-- Parent container to hold the box -->
-        <div class="box translate"></div>  <!-- Box element that moves & changes color -->
-    </div>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- UltraEdit Logo -->
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="UltraEdit Logo">
+            </div>
+
+            <div class="right">
+                <!-- Navigation Menu -->
+                <ul>
+                    <li>
+                        <span>Products </span>
+                        <!-- Dropdown Icon -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <span>Pricing </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <span>Resources </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <span>About Us </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <!-- Language Selection -->
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png"
+                            alt="Language Icon">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- First Section: UltraEdit Download Info -->
+        <section class="first">
+            <span>
+                Download <b>UltraEdit</b> for Windows
+                <!-- Reviews Icon -->
+                <img width="34" src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="Reviews">
+            </span>
+            <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text
+                editor.</p>
+
+            <div>
+                <!-- Button to download Mac or Linux version -->
+                <button class="btn">
+                    DOWNLOAD MAC OR LINUX VERSION
+                </button>
+            </div>
+        </section>
+
+        <!-- Second Section: Download Options -->
+        <section class="second">
+            <div class="download">
+                <!-- UltraEdit Icon and Version Info -->
+                <img src="https://www.ultraedit.com/wp-content/uploads/2022/11/UE.png" alt="UltraEdit Icon">
+                <span>Download UltraEdit </span>
+                <span class="small">v2023.1 (released 08/16/2023) | Hotfix</span>
+            </div>
+
+            <!-- Grid Section for Language-Specific Downloads -->
+            <div class="grid">
+                <!-- Each item represents a language-specific download option -->
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">
+                        <a href="ue_english_64.exe">Download 32-bit</a>
+                    </button>
+                    <button class="btn green">
+                        <a href="ue_english_64.exe">Download 64-bit</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -1,72 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Transforms</title>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <title>CSS Transitions</title> <!-- Title of the webpage -->
     <style>
-        .box {
-            height: 50px; /* Sets the height of the box */
-            width: 50px;  /* Sets the width of the box */
-            background-color: beige; /* Applies a beige background */
-            border: 2px solid black; /* Adds a black border around the box */
 
-            /* The below CSS transformations apply different effects to the box */
-
-            /* Rotates the element by 40 degrees */
-            /* transform: rotate(40deg); */
-
-            /* Rotates the element by half a full turn (180 degrees) */
-            /* transform: rotate(0.5turn); */
-
-            /* Rotates the element around the X-axis by 10 degrees (3D effect) */
-            /* transform: rotateX(10deg); */
-
-            /* Rotates the element around the Y-axis by 50 degrees (3D effect) */
-            /* transform: rotateY(50deg); */
-
-            /* Rotates the element around the Z-axis by 9 degrees (2D effect) */
-            /* transform: rotateZ(9deg); */
-
-            /* Scales the element to 1.5 times its original size */
-            /* transform: scale(1.5); */
-
-            /* 3D scaling (not used, would require specific values) */
-            /* transform: scale3d(); */
-
-            /* Skews the element by 5 degrees along the X-axis */
-            /* transform: skew(5deg); */
-
-            /* Moves the element 30% to the right */
-            /* transform: translate(30%); */
-
-            /* Applies multiple transformations:
-               - Moves the element down by 100% of its height (translateY(100%))
-               - Skews it along the X-axis by 40 degrees (skewX(40deg))
-               - Moves it to the right by 45% of its width (translateX(45%))
-            */
-            transform: translateY(100%) skewX(40deg) translateX(45%);
-
-            display: flex; /* Enables flexbox for centering */
-            justify-content: center; /* Centers content horizontally */
-            align-items: center; /* Centers content vertically */
-        }
-
+        /* ======= CONTAINER STYLES ======= */
         .container {
-            width: 100vh; /* This should be 100vw instead, but it's set to viewport height */
-            height: 80vh; /* Sets the container's height to 80% of the viewport height */
-            border: 2px solid purple; /* Adds a purple border around the container */
+            background-color: antiquewhite; /* Light beige background color */
+            width: 50vw; /* 50% of the viewport width */
+            height: 40vh; /* 40% of the viewport height */
         }
+
+        /* ======= BOX STYLES ======= */
+        .box {
+            background-color: aquamarine; /* Light greenish-blue color */
+            width: 5vw; /* 5% of the viewport width */
+            height: 4vh; /* 4% of the viewport height */
+            
+            /* TRANSITION EFFECTS */
+            /* 
+            - Specifies which properties will change with an animation.
+            - transition-property: background-color, transform; 
+              → The background color and transform properties will change.
+            - transition-duration: 3s; 
+              → The animation will last 3 seconds.
+            - transition-timing-function: ease-in-out; 
+              → The transition will start slow, speed up, and then slow down at the end.
+            - transition-delay: 1s; 
+              → The transition starts after a 1-second delay.
+            */
+
+            /* Shorter alternative using transition shorthand */
+            transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
+            /*
+            - 'all' → Applies transition to all properties that support animation.
+            - '3s' → Transition duration is 3 seconds.
+            - 'cubic-bezier(0.09, 0.5, 0, 0.99)' → Custom easing function for smooth acceleration and deceleration.
+            - '1s' → 1-second delay before transition starts.
+            */
+        }
+
+        /* ======= TRANSLATE CLASS (TRIGGERED TRANSFORMATION) ======= */
+        .translate {
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            /* Moves the box:
+                - 10vw (viewport width) to the right
+                - 10vh (viewport height) downward
+                - Doubles its size (scale(2)) */
+
+            background-color: blue; /* Changes background color to blue */
+        }
+
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="box">
-            box <!-- This is the text inside the box -->
-        </div>
+    <div class="container"> <!-- Parent container to hold the box -->
+        <div class="box translate"></div>  <!-- Box element that moves & changes color -->
     </div>
 </body>
-
 </html>
