@@ -111,33 +111,6 @@ if (age2 > 18) {
     console.log('Grow up!');
 }
 
-// ✅ WHILE LOOP (Executes as long as condition is true)
-let i = 0;
-while (i < 10) {
-    console.log(i);
-    i++; // Increment i to avoid infinite loop
-}
-
-// ✅ FOR LOOP (Used when the number of iterations is known)
-/*
-for ([initialization]; [condition]; [final-expression];) {
-    block of code
-}
-*/
-
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
-
-
-/*
-// DRY Code - Dont repeat yourself
-console.log(1);
-console.log(1);
-console.log(1);
-console.log(1);
-*/
-
 
 // ✅ TERNARY OPERATOR (Shortened if-else)
 let m = 6;
