@@ -12,27 +12,38 @@
   <style>
     /* ====== STYLES FOR THE BOUNCING BALL ====== */
     .box {
-      height: 121px;  /* Sets the height of the ball */
-      width: 121px;  /* Sets the width of the ball */
-      background-color: red;  /* Red color for the ball */
-      border-radius: 70px;  /* Makes the shape circular */
-      position: absolute;  /* Positions the ball absolutely within its container */
-      bottom: 0;  /* Starts the ball at the bottom */
-      left: 0;  /* Starts the ball from the left */
+      height: 121px;
+      /* Sets the height of the ball */
+      width: 121px;
+      /* Sets the width of the ball */
+      background-color: red;
+      /* Red color for the ball */
+      border-radius: 70px;
+      /* Makes the shape circular */
+      position: absolute;
+      /* Positions the ball absolutely within its container */
+      bottom: 0;
+      /* Starts the ball at the bottom */
+      left: 0;
+      /* Starts the ball from the left */
 
       /* Adding two animations:
-         - animateX moves the ball horizontally
-         - animateY makes the ball bounce vertically */
+              - animateX moves the ball horizontally
+              - animateY makes the ball bounce vertically */
       animation: animateX 3s linear infinite,
-                 animateY 1s ease-out infinite alternate;
+        animateY 1s ease-out infinite alternate;
     }
 
     /* ====== STYLES FOR THE CONTAINER (BOUNDARY) ====== */
     .container {
-      position: relative;  /* Allows absolute positioning of child elements inside */
-      height: 80vh;  /* 80% of the viewport height */
-      width: 80vw;  /* 80% of the viewport width */
-      background-color: blue;  /* Blue background for contrast */
+      position: relative;
+      /* Allows absolute positioning of child elements inside */
+      height: 80vh;
+      /* 80% of the viewport height */
+      width: 80vw;
+      /* 80% of the viewport width */
+      background-color: blue;
+      /* Blue background for contrast */
     }
 
     /* ====== KEYFRAMES FOR ANIMATIONS ====== */
@@ -40,20 +51,26 @@
     /* animateX: Moves the ball horizontally from left to right */
     @keyframes animateX {
       from {
-        left: 0;  /* Starts from the leftmost position */
+        left: 0;
+        /* Starts from the leftmost position */
       }
+
       to {
-        left: 100%;  /* Moves to the rightmost edge of the container */
+        left: 100%;
+        /* Moves to the rightmost edge of the container */
       }
     }
 
     /* animateY: Makes the ball bounce vertically */
     @keyframes animateY {
       from {
-        bottom: 0;  /* Starts at the bottom */
+        bottom: 0;
+        /* Starts at the bottom */
       }
+
       to {
-        bottom: 100%;  /* Moves up to the top of the container */
+        bottom: 100%;
+        /* Moves up to the top of the container */
       }
     }
   </style>
