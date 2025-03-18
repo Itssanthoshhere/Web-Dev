@@ -1,0 +1,84 @@
+<!-- Exercise - 12 | Color the Boxes 
+   Given 5 boxes, Assign a random color and a random background to each box using DOM concepts -->
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+   
+   <head>
+       <!-- Meta information for character encoding -->
+       <meta charset="UTF-8"> <!-- Ensures proper encoding for special characters like accents and symbols -->
+   
+       <!-- Meta tag for responsive design -->
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <!-- Ensures the webpage adapts to different screen sizes -->
+   
+       <!-- Title of the webpage (appears in the browser tab) -->
+       <title>Exercise - 12 | Color the Boxes</title>
+   
+       <!-- CSS styles to structure and style the boxes -->
+       <style>
+           /* Styles the container to center the boxes horizontally */
+           .container {
+               display: flex; /* Uses flexbox layout */
+               justify-content: center; /* Centers items horizontally */
+               align-items: center; /* Centers items vertically */
+               gap: 23px; /* Adds space between boxes */
+               margin-top: 20px;
+           }
+   
+           /* Styling for each box */
+           .box {
+               display: flex; /* Uses flexbox to center text */
+               justify-content: center; /* Centers text horizontally */
+               align-items: center; /* Centers text vertically */
+               height: 45px; /* Sets the height of each box */
+               width: 45px; /* Sets the width of each box */
+               border: 2px solid black; /* Adds a black border around each box */
+               font-weight: bold;
+           }
+
+           /* Styling the button */
+           .btn {
+                display: block;
+                margin: 20px auto;
+                padding: 12px 24px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                background-color: #ff5733;
+                color: white;
+                border-radius: 8px;
+                transition: all 0.3s ease, transform 0.2s ease;
+           }
+
+           .btn:hover {
+                background-color: #e64a19;
+                transform: scale(1.05);
+           }
+           
+       </style>
+   </head>
+   
+   <body>
+       
+       <!-- Main container that holds all the boxes -->
+       <div class="container">
+           <!-- 5 div elements with the class "box" -->
+           <div class="box">Box</div>
+           <div class="box">Box</div>
+           <div class="box">Box</div>
+           <div class="box">Box</div>
+           <div class="box">Box</div>
+        </div>
+        
+        <!-- Button to change colors -->
+        <button class="btn" onclick="changeColors()">Change Colors</button>
+        
+       <!-- Linking an external JavaScript file -->
+       <script src="script.js"></script> 
+       <!-- This script file (script.js) will execute when the page loads -->
+   </body>
+   
+   </html>
