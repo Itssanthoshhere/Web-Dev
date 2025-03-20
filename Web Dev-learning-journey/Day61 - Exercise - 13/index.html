@@ -1,0 +1,148 @@
+<!-- Exercise - 13 | Dynamic Website Builder -->
+
+<!-- Problem Statement:
+     Create a dynamic video card similar to the one shown in Card.png. The card should display the following details dynamically:
+     
+     → Thumbnail (Video preview image)
+     → Title (Video title)
+     → Channel Name (Uploader's name)
+     → Views (Total number of views, formatted in K/M)
+     → Upload Time (Time since the video was uploaded, e.g., "2 months ago")
+     → Duration (Total length of the video, e.g., "31:20")
+-->
+
+<!DOCTYPE html>
+<html lang="en">`
+
+<head>
+    <!-- Meta information for character encoding -->
+    <meta charset="UTF-8"> <!-- Ensures proper encoding for special characters like accents and symbols -->
+
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the webpage adapts to different screen sizes -->
+
+    <!-- Title of the webpage (appears in the browser tab) -->
+    <title>Dynamic YouTube Video Card</title>
+
+    <style>
+        /* Styling for the overall body */
+        body {
+            background-color: #0f0f0f; /* Dark theme */
+            color: white; /* White text */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Styling for the container holding the card */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin: 20px;
+        }
+
+        /* Styling for each video card */
+        .card {
+            display: flex;
+            background-color: #181818; /* Dark background for card */
+            width: 500px; /* Card width */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer; /* Cursor changes to pointer on hover */
+            transition: background 0.3s; /* Smooth transition for background color on hover */
+        }
+
+        /* Hover effect for the card */
+        .card:hover {
+            background-color: #282828; /* Slightly lighter background when hovering */
+        }
+
+        /* Styling for the image inside the card */
+        .image {
+            position: relative;
+            cursor: pointer; /* Cursor changes when hovering over the image */
+        }
+
+        /* Styling for the image inside the card */
+        .image img {
+            width: 160px; /* Image width */
+            border-radius: 10px; /* Rounded corners for image */
+        }
+
+        /* Styling for the duration capsule on the image */
+        .capsule {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: rgba(0, 0, 0, 0.8); /* Dark background for the duration capsule */
+            color: white; /* White text */
+            padding: 3px 6px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px; /* Rounded corners for the capsule */
+        }
+
+        /* Styling for the text part of the card */
+        .text {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+        }
+
+        /* Styling for the video title */
+        .text h1 {
+            font-size: 16px; /* Font size for the title */
+            margin: 0; /* Remove margin */
+            font-weight: bold; /* Bold text for the title */
+        }
+
+        /* Styling for the video description (channel name, views, time) */
+        .text p {
+            font-size: 13px; /* Font size for the description */
+            color: gray; /* Gray color for the description text */
+            margin: 4px 0 0; /* Margin above the description */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- JavaScript to create the video card dynamically -->
+        <script>
+            function createCard(title, CName, views, monthsOld, duration, thumbnail) {
+                let viewStr;
+                
+                // Formatting the views (K for thousands, M for millions)
+                if (views < 1000) {
+                    viewStr = views;
+                } else if (views > 1000000) {
+                    viewStr = views / 1000000 + "M"; // Convert views to millions
+                } else {
+                    viewStr = views / 1000 + "K"; // Convert views to thousands
+                }
+
+                // Create the HTML structure for the card
+                let html = `<div class="card">
+                    <div class="image">
+                        <img src="${thumbnail}" alt="">
+                        <div class="capsule">${duration}</div> <!-- Duration capsule -->
+                    </div>
+                    <div class="text">
+                        <h1>${title}</h1> <!-- Video title -->
+                        <p>${CName} . ${viewStr} views . ${monthsOld} months ago</p> <!-- Channel, views, time -->
+                    </div>`;
+
+                // Append the generated HTML to the container
+                document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html;
+            }
+        </script>
+    </div>
+
+    <!-- Linking an external JavaScript file -->
+    <script src="script.js"></script>
+    <!-- This script file (script.js) will execute when the page loads -->
+</body>
+
+</html>
