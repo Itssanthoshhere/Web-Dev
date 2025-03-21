@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for character encoding -->
+    <meta charset="UTF-8"> <!-- Ensures proper encoding for special characters -->
+
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage (appears in the browser tab) -->
+    <title>JavaScript - Events</title>
+
+    <style>
+        /* Basic styling for body */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font style */
+            text-align: center; /* Centers all text content */
+            margin-top: 50px; /* Adds space at the top */
+        }
+
+        /* Container to align boxes horizontally */
+        .container {
+            display: flex; /* Aligns child elements in a row */
+            justify-content: center; /* Centers content horizontally */
+            gap: 20px; /* Adds space between elements */
+        }
+
+        /* Styles for the boxes */
+        .box, .box1 {
+            width: 200px; /* Box width */
+            height: 100px; /* Box height */
+            background-color: lightblue; /* Background color */
+            display: flex; /* Enables flexbox */
+            align-items: center; /* Centers content vertically */
+            justify-content: center; /* Centers content horizontally */
+            font-size: 18px; /* Text size */
+            font-weight: bold; /* Makes text bold */
+            border: 2px solid blue; /* Blue border around the box */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            border-radius: 10px; /* Rounds the corners */
+        }
+
+        /* Styles for the button */
+        button {
+            margin-top: 20px; /* Adds space above the button */
+            padding: 10px 20px; /* Adds padding inside the button */
+            font-size: 16px; /* Text size */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- A container that holds two interactive boxes -->
+    <div class="container">
+        <div class="box">Hey, I'm a box</div> <!-- First box -->
+        <div class="box1">Hey, I'm another box</div> <!-- Second box -->
+    </div>
+    
+    <!-- Button that will trigger JavaScript events -->
+    <button id="btn">Change Content</button>
+
+    <!-- Linking an external JavaScript file (event.js) -->
+    <script src="event.js"></script>
+
+</body>
+
+</html>

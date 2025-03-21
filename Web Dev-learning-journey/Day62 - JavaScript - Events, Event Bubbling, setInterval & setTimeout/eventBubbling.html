@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for character encoding -->
+    <meta charset="UTF-8"> <!-- Ensures proper encoding for special characters -->
+
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage (appears in the browser tab) -->
+    <title>JavaScript - Event Bubbling</title>
+
+    <style>
+        /* Styling for child element */
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer; /* Pointer cursor for better UX */
+        }
+
+        /* Styling for child container */
+        .childContainer {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        /* Styling for main container */
+        .container {
+            background-color: rgb(227, 227, 28);
+            padding: 14px;
+            margin: 14px;
+        }
+
+        /* Styling for Stop Color Change button */
+        #stopColorChange {
+            margin: 14px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer; /* Makes button clickable */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Parent container -->
+    <div class="container">
+        <!-- Child container -->
+        <section class="childContainer">
+            <!-- Child element -->
+            <div class="child">
+                I'm a child
+            </div>
+        </section>
+    </div>
+
+    <!-- Button to stop color change -->
+    <button id="stopColorChange">Stop Color Change</button>
+
+    <script>
+        // 🖱️ Event Bubbling Demonstration
+
+        // 🎯 Child Click Event - Stops event from bubbling to parent elements
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevents event propagation to parent elements
+            alert("Child was clicked!");
+        });
+
+        // 🎯 Child Container Click Event - Triggers when clicking anywhere in the childContainer
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            alert("childContainer was clicked!");
+        });
+
+        // 🎯 Parent Container Click Event - Triggers when clicking on the container
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("Container was clicked!");
+        });
+
+        // 🎨 Function to Generate Random RGB Colors
+        function getRandomColor() {
+            let val1 = Math.ceil(Math.random() * 255); // Generates a random number between 0-255
+            let val2 = Math.ceil(Math.random() * 255);
+            let val3 = Math.ceil(Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`; // Returns a random RGB color
+        }
+
+        // ⏳ setTimeout - Changes color after 1 second, then starts setInterval
+        setTimeout(() => {
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 1000);
+
+        // 🎨 setInterval - Repeatedly Changes Color Every 1 Second
+        let colorInterval = setInterval(() => {
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 1000);
+
+        // 🛑 Button to Stop Color Change - Stops the interval when clicked
+        document.getElementById("stopColorChange").addEventListener("click", () => {
+            clearInterval(colorInterval); // Stops the interval loop
+            alert("Color change stopped!");
+        });
+    </script>
+</body>
+
+</html>
