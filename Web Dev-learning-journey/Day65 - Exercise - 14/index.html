@@ -1,0 +1,117 @@
+<!-- Exercise - 14 | Hacker's Terminal -->
+
+<!-- Problem Statement:
+    Create a hacking simulator with a green background that imitates a real terminal. The simulator should display the following messages with a random delay of 1 to 7 seconds between them:
+
+     → Initializing Hacking...
+     → Reading your Files...
+     → Password files Detected...
+     → Sending all passwords and personal files to server...
+     → Cleaning up...
+
+    Additionally, the three dots at the end of each message should blink to enhance the realistic terminal effect.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for character encoding -->
+    <meta charset="UTF-8"> <!-- Ensures proper encoding for special characters like accents and symbols -->
+
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the webpage adapts to different screen sizes -->
+
+    <!-- Title of the webpage (appears in the browser tab) -->
+    <title>Hacker's Terminal</title>
+
+    <style>
+        /* Importing Google Fonts for styling */
+        /* @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        /* Styling the body to create a hacking terminal effect */
+        body {
+            background-color: black;
+            color: #0f0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 18px;
+            padding: 20px;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Initial message displayed immediately -->
+    <div>Initializing Hacking...</div>
+
+    <script>
+        /**
+         * Function to add a new message to the screen after a random delay
+         * @param {string} item - The message to be displayed
+         */
+        const addItem = async (item) => {
+            await randomDelay(); // Wait for a random delay
+            let div = document.createElement("div"); // Create a new div element
+            div.innerHTML = item; // Set its content
+            document.body.append(div); // Append it to the body
+        }
+
+        /**
+         * Function to generate a random delay between 1 to 7 seconds
+         * @returns {Promise} - Resolves after a random timeout
+         */
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                timeout = 1 + 6 * Math.random(); // Random time between 1 to 7 seconds
+                setTimeout(() => {
+                    resolve(); // Resolve the promise after the timeout
+                }, timeout * 1000);
+            })
+        }
+
+        /**
+         * Main function to display messages sequentially with realistic blinking dots
+         */
+        async function main() {
+            // Interval function to create blinking effect on the last message
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div"); // Get all div elements
+                last = last[last.length - 1]; // Select the last div
+
+                // Toggle dots at the end of the last message
+                if (last.innerHTML.endsWith("...")) {
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3); // Remove dots
+                }
+                else {
+                    last.innerHTML = last.innerHTML + "."; // Add dots
+                }
+            }, 100); // Repeat every 100 milliseconds
+
+            // Array of messages to be displayed sequentially
+            let text = ["Initialized Hacking reading your data",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"]
+
+            // Loop through each message and display it after a delay
+            for (const item of text) {
+                await addItem(item);
+            }
+
+            await randomDelay(); // Wait for a final delay before stopping blinking
+            clearInterval(t); // Stop the blinking effect
+        }
+
+        // Start executing the main function
+        main();
+    </script>
+</body>
+
+</html>
