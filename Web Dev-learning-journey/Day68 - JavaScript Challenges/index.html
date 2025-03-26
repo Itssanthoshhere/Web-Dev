@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenges</title>
+</head>
+<body>
+
+    <h2>JavaScript Challenges</h2>
+    <button onclick="runChallenges()">Run JavaScript Challenges</button>
+
+    <script>
+        function runChallenges() {
+            console.clear();
+            console.log("🚀 Running JavaScript Challenges...");
+
+            // 1️⃣ The Magical Sorting Hat
+            function sortingHat(students) {
+                return students.map(name => {
+                    if (name.length < 6) return { name, house: "Gryffindor" };
+                    else if (name.length < 8) return { name, house: "Hufflepuff" };
+                    else if (name.length < 12) return { name, house: "Ravenclaw" };
+                    return { name, house: "Slytherin" };
+                });
+            }
+            console.log("🎩 Sorting Hat:", sortingHat(["Harry", "Hermione", "Luna", "Draco", "Cedric"]));
+
+            // 2️⃣ Double Trouble
+            function doubleTrouble(arr) {
+                return arr.map((num, index, array) =>
+                    (index > 0 && num === array[index - 1]) ? num : num * 2
+                );
+            }
+            console.log("✌️ Double Trouble:", doubleTrouble([2, 2, 3, 4, 4, 5]));
+
+            // 3️⃣ Mirror Mirror
+            function mirrorString(str) {
+                return str + str.split("").reverse().join("");
+            }
+            console.log("🔄 Mirror String:", mirrorString("hello"));
+
+            // 4️⃣ Password Validator
+            function isValidPassword(password) {
+                return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
+            }
+            console.log("🔐 Strong Password:", isValidPassword("StrongP@ss1"));
+            console.log("🔐 Weak Password:", isValidPassword("weakpass"));
+
+            // 5️⃣ Sum Until Negative
+            function sumUntilNegative(arr) {
+                let sum = 0;
+                for (let num of arr) {
+                    if (num < 0) break;
+                    sum += num;
+                }
+                return sum;
+            }
+            console.log("➕ Sum Until Negative:", sumUntilNegative([1, 2, 3, -1, 4]));
+
+            // 6️⃣ Vowel Counter
+            function countVowels(str) {
+                return (str.match(/[aeiouAEIOU]/g) || []).length;
+            }
+            console.log("🅰️ Vowel Count:", countVowels("Hello World"));
+
+            // 7️⃣ Local Storage Manager
+            function saveNoteToLocalStorage(note) {
+                localStorage.setItem("note", JSON.stringify(note));
+            }
+            saveNoteToLocalStorage({ title: "Meeting", content: "Discuss project updates" });
+            console.log("💾 Note saved to Local Storage!");
+
+            // 8️⃣ Async Array Mapping
+            async function asyncDouble(arr) {
+                let result = await Promise.all(arr.map(num =>
+                    new Promise(resolve => setTimeout(() => resolve(num * 2), 500))
+                ));
+                console.log("🔄 Async Doubled Array:", result);
+            }
+            asyncDouble([1, 2, 3]);
+
+            // 9️⃣ Asynchronous Shopper
+            function placeOrder(order) {
+                return new Promise(resolve => {
+                    let delay = Math.random() * 2000;
+                    setTimeout(() => resolve(`🛍️ Order for ${order} placed successfully!`), delay);
+                });
+            }
+            placeOrder("Laptop").then(console.log);
+
+            // 🔟 The Coffee Machine
+            function brewCoffee(type) {
+                return new Promise(resolve => {
+                    let delay = Math.random() * 3000;
+                    setTimeout(() => resolve(`☕ ${type} coffee is ready!`), delay);
+                });
+            }
+            brewCoffee("Espresso").then(console.log);
+
+            // 1️⃣1️⃣ Array Filterer
+            function filterProducts(products, criterion) {
+                return products.filter(product => product.category === criterion);
+            }
+            console.log("🔍 Filtered Products:", filterProducts(
+                [{ name: "Laptop", category: "Electronics" }, { name: "Apple", category: "Fruits" }],
+                "Electronics"
+            ));
+
+            // 1️⃣2️⃣ Token Manager
+            function setAuthToken(token, expirationMinutes = 60) {
+                let expirationTime = Date.now() + expirationMinutes * 60000;
+                localStorage.setItem("authToken", JSON.stringify({ token, expirationTime }));
+            }
+            setAuthToken("abcd1234");
+            console.log("🔑 Auth Token saved!");
+
+            // 1️⃣3️⃣ Shopping Cart Totalizer
+            function calculateTotal(cart) {
+                return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+            }
+            console.log("🛒 Cart Total:", calculateTotal([
+                { price: 100, quantity: 2 },
+                { price: 50, quantity: 1 }
+            ]));
+
+            // 1️⃣4️⃣ Smooth Scroll
+            function smoothScrollToTop() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            console.log("📜 Scroll function ready! Run smoothScrollToTop() in console.");
+        }
+    </script>
+</body>
+</html>
