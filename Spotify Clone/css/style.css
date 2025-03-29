@@ -84,11 +84,21 @@ body {
    padding: 16px;
 }
 
-.spotifyPlaylists .card {
-   width: 200px;
+.cardContainer {
+   margin: 30px;
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
 }
 
-.card > * {
+.card {
+   width: 200px;
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #252525;
+}
+
+.card>* {
    padding-top: 10px;
 }
 
@@ -97,3 +107,14 @@ body {
    object-fit: contain;
 }
 
+.play {
+   width: 28px;
+   height: 28px;
+   background-color: #00FF00;
+   border-radius: 50%;
+   border: 2px solid #000;
+   padding: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
