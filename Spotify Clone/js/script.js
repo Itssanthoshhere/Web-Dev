@@ -1,5 +1,7 @@
 console.log("Script.js is initializing...");
 
+let currentSong = new Audio();
+
 async function getSongs() {
     let a = await fetch("http://10.12.61.14:3000/songs/");
     let response = await a.text();
@@ -18,6 +20,16 @@ async function getSongs() {
     }
 
     return songs
+}
+
+const playMusic = (track) => {
+    // let audio = new Audio("/songs/" + track);
+    // audio.play();
+    currentSong.src = "/songs/" + track;
+    currentSong.play();
+    play.src = "pause.svg";
+    document.querySelector(".songinfo").innerHTML = track;
+    document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 }
 
 async function main() {
@@ -46,11 +58,31 @@ async function main() {
     audio.play();
 
     audio.addEventListener("loadeddata", () => {
-        let duration = audio.duration;
+        let duration = audio.duration; 
         console.log(duration);
         // The duration variable now holds the duration (in seconds) of the audio clip
     });
     */
+
+    // Attach an event listener to each song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
+            console.log(e.querySelector(".info").firstElementChild.innerHTML);
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
+        });
+    });
+
+    // Attach an event listener to play, next and previous
+    play.addEventListener("click", () => {
+        if (currentSong.paused) {
+            currentSong.play();
+            play.src = "pause.svg";
+        }
+        else {
+            currentSong.pause();
+            play.src = "play.svg";
+        }
+    });
 }
 
 main();
