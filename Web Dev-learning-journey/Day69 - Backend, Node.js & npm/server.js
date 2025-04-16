@@ -9,3 +9,4 @@ console.log(a); // Output: some-string
 const b = slugify('some st&&*(^%$$^^&ring', '_'); 
 // Special characters are removed, and spaces are replaced with '_'
 console.log(b); // Output: some_string
+
