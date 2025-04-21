@@ -59,7 +59,7 @@ async function getSongs(folder) {
     // Play the first song
     var audio = new Audio(songs[0]);
     audio.play();
- 
+
     audio.addEventListener("loadeddata", () => {
         let duration = audio.duration; 
         console.log(duration);
@@ -82,7 +82,7 @@ const playMusic = (track, pause = false) => {
     // let audio = new Audio("/songs/" + track);
     // audio.play();
 
-    currentSong.src = `/ ${currFolder}/` + track;
+    currentSong.src = `/${currFolder}/` + track;
     if (!pause) {
         currentSong.play();
         play.src = "img/pause.svg";
