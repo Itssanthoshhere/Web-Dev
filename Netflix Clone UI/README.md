@@ -30,7 +30,7 @@ This project is a front-end replica of Netflix's landing page. It features a cle
 ```
 
 ## 💻 Live Demo  
-🔗 **Check out the deployed project here:** [Netflix Clone UI](https://netflix-clone-ui-black.vercel.app/)
+🔗 **Check out the deployed project here:** [Netflix Clone UI](https://netflix-clone-ui-henna.vercel.app/)
 
 ## 💻 How to Run the Project
 1. Clone the repository:  
