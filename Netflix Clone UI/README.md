@@ -39,7 +39,7 @@ This is a front-end project that **recreates the look and feel of a popular stre
 
 ## 💻 Live Demo
 
-🔗 **Check out the deployed project here:** [Movie Streamer UI](https://movie-streamer-clone-ui-git-main-santhoshs-projects-3ac808c1.vercel.app/)
+🔗 **Check out the deployed project here:** [Movie Streamer UI](https://movie-streamer-clone-6usu84kg4-santhoshs-projects-3ac808c1.vercel.app/)
 
 ## 💻 How to Run the Project
 
