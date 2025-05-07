@@ -8,15 +8,24 @@
 </head>
 
 <body>
+
     <script>
+        // NOTE: Define an asynchronous function to test a PUT request
         async function testPostRequest() {
+            // TODO: Send a PUT request to the root URL ("/")
             let a = await fetch("/", { method: "PUT" });
+
+            // NOTE: Await the response and convert it to text
             let b = await a.text();
+
+            // INFO: Log the server response to the console
             console.log(b);
         }
 
+        // NOTE: Call the function immediately when the script runs
         testPostRequest();
     </script>
+
 </body>
 
 </html>
