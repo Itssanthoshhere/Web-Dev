@@ -1,0 +1,17 @@
+/* 
+  Import Tailwind's base styles — includes normalization, 
+  default styles, and CSS reset from Tailwind
+*/
+@tailwind base;
+
+/* 
+  Import Tailwind's component classes — includes pre-built 
+  component classes like buttons, forms, etc.
+*/
+@tailwind components;
+
+/* 
+  Import Tailwind's utility classes — includes margin, padding, 
+  color, grid, flex, typography, and many more utilities
+*/
+@tailwind utilities;
