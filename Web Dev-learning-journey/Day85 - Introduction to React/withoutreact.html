@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Set character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Without React</title> <!-- Page title -->
+</head>
+
+<body>
+    <!-- Displaying the counter -->
+    <div id="counter">0</div>
+
+    <!-- Button to increment the counter -->
+    <button id="btn">Click Me</button>
+
+    <script>
+        // Add a click event listener to the button
+        document.getElementById('btn').addEventListener('click', () => {
+            // Get the current counter value and convert it to an integer
+            let num = parseInt(document.getElementById("counter").innerHTML);
+
+            // Increment the counter and update the DOM
+            document.getElementById("counter").innerHTML = num + 1;
+        });
+    </script>
+</body>
+
+</html>

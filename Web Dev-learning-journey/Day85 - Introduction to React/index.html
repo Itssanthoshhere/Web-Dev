@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Set character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make page responsive -->
+    <title>Why React?</title>
+
+    <!-- Internal CSS Styling -->
+    <style>
+        .box {
+            color: red;
+            /* Text color */
+            height: 121px;
+            /* Height of box */
+            width: 121px;
+            /* Width of box */
+            border: 2px solid black;
+            /* Border styling */
+            padding: 3px;
+            /* Padding inside box */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- JavaScript variables for content (currently not used directly) -->
+    <script>
+        let box1 = "I'm box 1";
+        let box2 = "I'm box 2";
+        let box3 = "I'm box 3";
+    </script>
+
+    <!-- Box elements with initial content -->
+    <div class="box box1">box1</div>
+    <div class="box box2">I'm box 2</div>
+    <div class="box box3">I'm box 3</div>
+
+    <!-- Button (no action currently assigned) -->
+    <button>Click Me</button>
+</body>
+
+<!-- JavaScript to update the content of boxes after a delay -->
+<script>
+    // Change content of box1 after 1 second
+    setTimeout(() => {
+        document.querySelector(".box1").innerHTML = "Hey"
+    }, 1000);
+
+    // Change content of box2 after 2 seconds
+    setTimeout(() => {
+        document.querySelector(".box2").innerHTML = "Hello"
+    }, 2000);
+
+    // Change content of box3 after 3 seconds
+    setTimeout(() => {
+        document.querySelector(".box3").innerHTML = "Hi"
+    }, 3000);
+</script>
+
+</html>
