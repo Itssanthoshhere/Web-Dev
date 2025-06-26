@@ -1,0 +1,12 @@
+{
+  "name": "day84---hosting-an-express-app-on-ubuntu-vps-using-hostinger",
+  "version": "1.0.0",
+  "description": "This guide outlines the steps to host a Node.js application on an Ubuntu server using Nginx as a reverse proxy and pm2 as a process manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
